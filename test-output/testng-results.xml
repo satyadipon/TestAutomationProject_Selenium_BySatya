@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="138406" started-at="2019-07-09T11:59:31Z" finished-at="2019-07-09T12:01:49Z">
+    <groups>
+      <group name="addToCart">
+        <method signature="AddToCartFunctionalityTest.addToCartFunctionalityTest()[pri:0, instance:com.hfc.tests.AddToCartFunctionalityTest@7e6f74c]" name="addToCartFunctionalityTest" class="com.hfc.tests.AddToCartFunctionalityTest"/>
+      </group> <!-- addToCart -->
+    </groups>
+    <test name="Test" duration-ms="138406" started-at="2019-07-09T11:59:31Z" finished-at="2019-07-09T12:01:49Z">
+      <class name="com.hfc.tests.AddToCartFunctionalityTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hfc.tests.AddToCartFunctionalityTest@7e6f74c]" name="setUp" is-config="true" duration-ms="669" started-at="2019-07-09T17:29:30Z" finished-at="2019-07-09T17:29:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.hfc.tests.AddToCartFunctionalityTest@7e6f74c]" name="beforeClass" is-config="true" duration-ms="18" started-at="2019-07-09T17:29:31Z" finished-at="2019-07-09T17:29:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.hfc.tests.AddToCartFunctionalityTest@7e6f74c]" name="beforeMethod" is-config="true" duration-ms="10733" started-at="2019-07-09T17:29:31Z" finished-at="2019-07-09T17:29:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.hfc.tests.AddToCartFunctionalityTest.addToCartFunctionalityTest() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="addToCartFunctionalityTest()[pri:0, instance:com.hfc.tests.AddToCartFunctionalityTest@7e6f74c]" name="addToCartFunctionalityTest" duration-ms="124810" started-at="2019-07-09T17:29:41Z" description="add to cart functionality" finished-at="2019-07-09T17:31:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCartFunctionalityTest -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.hfc.tests.AddToCartFunctionalityTest@7e6f74c]" name="afterMethod" is-config="true" duration-ms="423" started-at="2019-07-09T17:31:49Z" finished-at="2019-07-09T17:31:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addToCartFunctionalityTest status=SUCCESS method=AddToCartFunctionalityTest.addToCartFunctionalityTest()[pri:0, instance:com.hfc.tests.AddToCartFunctionalityTest@7e6f74c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.hfc.tests.AddToCartFunctionalityTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
