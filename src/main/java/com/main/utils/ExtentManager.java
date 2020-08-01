@@ -36,7 +36,8 @@ public class ExtentManager {
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);*/
 		
 		htmlReporter.setAppendExisting(false);
-		htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "\\src\\test\\resources\\extentConfig\\ReportsConfig.xml");
+		// htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "\\src\\test\\resources\\extentConfig\\ReportsConfig.xml");
+		htmlReporter.loadConfig(ExtentManager.class.getResourceAsStream("/extentConfig/ReportsConfig.xml"));
 
 		return htmlReporter;
 	}

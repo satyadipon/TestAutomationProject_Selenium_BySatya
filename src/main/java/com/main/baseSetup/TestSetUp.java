@@ -1,6 +1,7 @@
 package com.main.baseSetup;
 
 import java.lang.reflect.Method;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.ITestResult;
@@ -8,12 +9,14 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.main.utils.DriverFactory;
 import com.main.utils.DriverManager;
 import com.main.utils.ExtentManager;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestSetUp {
 
@@ -31,13 +34,8 @@ public class TestSetUp {
 	@BeforeSuite(alwaysRun = true)
 	public void setUp() {
 
-		DriverFactory.setChromeExeFilePath(
-				System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\chromedriver.exe");
-		
+		WebDriverManager.chromedriver().setup();
 		extent = ExtentManager.GetExtent();
-
-
-
 
 	}
 

@@ -7,8 +7,9 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 import com.hfc.pages.AddressPopUp;
-import com.hfc.pages.MenuPage;
+import com.hfc.pages.DeliveryPopup;
 import com.hfc.pages.LandingPage;
+import com.hfc.pages.MenuPage;
 import com.main.baseSetup.TestSetUp;
 import com.main.utils.Config;
 import com.main.utils.DriverManager;
@@ -45,21 +46,10 @@ public class AddToCartFunctionalityTest extends TestSetUp{
 		Assert.assertTrue(menu.getCustomerAddress().contains("Semperstraße 44, 1180 Wien, Austria"));
 		log("Added customer address is available in the address section");
 		
-		//Add Products, check product name and quanity after adding in cart
-		menu.addProduct("Beef Baby Burrito");
-		Assert.assertTrue(menu.isItemPresentInCart("Beef Baby Burrito"));
-		Assert.assertEquals(menu.getItemQuantity("Beef Baby Burrito"), "1");
-		log("Product "+"[Beef Baby Burrito]"+" added to the cart successfully");
-		
-		menu.addProduct("Cheesy Classic Quesadilla");
-		Assert.assertTrue(menu.isItemPresentInCart("Cheesy Classic Quesadilla"));
-		Assert.assertEquals(menu.getItemQuantity("Cheesy Classic Quesadilla"), "1");
-		log("Product "+"[Cheesy Classic Quesadilla]"+" added to the cart successfully");
-		
-		menu.addProduct("Cheesy Classic Quesadilla");
-		Assert.assertTrue(menu.isItemPresentInCart("Cheesy Classic Quesadilla"));
-		Assert.assertEquals(menu.getItemQuantity("Cheesy Classic Quesadilla"), "2");
-		log("Product "+"[Cheesy Classic Quesadilla]"+" added to the cart successfully");
+		//Add Products, check delivery option
+		DeliveryPopup delivery = menu.addProduct("Cheesy Pork Burrito");
+		Assert.assertTrue(delivery.isSelectDeliveryPlatformVisible(), "Delivery select option not available!!!");
+		log("Product "+"[Cheesy Pork Burrito]"+" added to the cart successfully");
 		
 		log("Add To Cart functionality - test validation complete");
 

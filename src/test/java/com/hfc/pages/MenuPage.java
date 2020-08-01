@@ -4,13 +4,13 @@ import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.aventstack.extentreports.Status;
-import com.main.utils.Config;
 import com.main.utils.DriverManager;
 import com.main.utils.Global;
 
@@ -37,8 +37,11 @@ public class MenuPage extends BasePage {
 
 	@FindBy(xpath = "//a[@class='product--title']/../preceding-sibling::div//button")
 	private List<WebElement> oButtonProductNameImageLink;
+	
+	@FindBy(xpath = "//button[@data-topup-close]")
+	private WebElement oButtonAddToCart;
 
-	@FindBy(id = "topup-modal--close")
+	@FindBy(xpath = "//*[contains(@class,'modal--close')]")
 	private WebElement oButtonCloseTopUpModal;
 	
 	@FindBy(xpath = "//div[@class='cart--item']//span[@class='item--name']")
@@ -59,7 +62,7 @@ public class MenuPage extends BasePage {
 		return oTextCustomerAddress.getAttribute("innerText");
 	}
 
-	public MenuPage addProduct(String input) throws Exception {
+	public DeliveryPopup addProduct(String input) throws Exception {
 
 		boolean isProductClicked = false;
 
@@ -71,8 +74,11 @@ public class MenuPage extends BasePage {
 				log("Product found - "+input);
 				Global.sleep(2);
 				oButtonProductNameImageLink.get(i).click();
+				Global.sleep(5);
 				log("Product is selected");
-				oButtonCloseTopUpModal.click();
+				((JavascriptExecutor)DriverManager.getDriver()).executeScript("arguments[0].scrollIntoView(true);", oButtonAddToCart);
+				Global.sleep(2);
+				oButtonAddToCart.click();
 				isProductClicked=true;
 				break;
 			}
@@ -83,7 +89,7 @@ public class MenuPage extends BasePage {
 			throw new Exception("Incorrect Product name or Product not available!!!");
 
 
-		return (MenuPage) openPage(MenuPage.class);
+		return (DeliveryPopup) openPage(DeliveryPopup.class);
 	}
 
 	public boolean isItemPresentInCart(String item) {
