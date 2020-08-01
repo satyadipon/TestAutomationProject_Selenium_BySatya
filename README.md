@@ -14,6 +14,7 @@ Install these tools in order to run the tests
 This project is designed using Maven+TestNG. Scripts are written in JAVA. Log4j2 is used for generating logs and extentReport is used to generate HTML reports for each test execution.
 
 Load the project into Eclipse.
+
 --src/main/java
 1. package: baseSetup -- Driver and Browser setup
 2. package: customListeners -- user for reporting
