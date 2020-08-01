@@ -26,3 +26,14 @@ Load the project into Eclipse.
 4. folder: runner - It consist of a testNG file and it is used to run the tests. Right click on file("testng.xml") and run the file as TestNG Suite.
 
 --log4j2.xml - it is designed to create log files for test execution
+
+-Install above tools in order to run the tests
+
+# How to run with Docker on Mac and Linux
+
+1. Clone this repo.
+2. Open a shell in the folder of this repo, run,
+
+   ```sh
+   mvn clean test
+   ```
