@@ -1,4 +1,5 @@
-Tools Used
+#Project Details
+##Tools Used
 
 1. Eclipse
 2. JAVA
@@ -6,7 +7,9 @@ Tools Used
 4. Maven
 5. Extent Report
 
-Framework Architecture Details
+Install these tools in order to run the tests
+
+##Framework Architecture Details
 This project is designed using Maven+TestNG. Scripts are written in JAVA. Log4j2 is used for generating logs and extentReport is used to generate HTML reports for each test execution.
 
 Load the project into Eclipse.
@@ -27,7 +30,6 @@ Load the project into Eclipse.
 
 --log4j2.xml - it is designed to create log files for test execution
 
--Install above tools in order to run the tests
 
 # How to run with Docker on Mac and Linux
 
