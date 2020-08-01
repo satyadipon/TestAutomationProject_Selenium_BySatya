@@ -33,7 +33,7 @@ Load the project into Eclipse.
 --log4j2.xml - it is designed to create log files for test execution
 
 
-# How to run with Docker on Mac and Linux
+# How to run Tests
 
 1. Clone this repo.
 2. Open a shell in the folder of this repo, run,
