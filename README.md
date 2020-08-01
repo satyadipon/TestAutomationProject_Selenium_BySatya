@@ -1,5 +1,6 @@
-#Project Details
-##Tools Used
+# Project Details
+
+## Tools Used
 
 1. Eclipse
 2. JAVA
@@ -9,7 +10,7 @@
 
 Install these tools in order to run the tests
 
-##Framework Architecture Details
+## Framework Architecture Details
 This project is designed using Maven+TestNG. Scripts are written in JAVA. Log4j2 is used for generating logs and extentReport is used to generate HTML reports for each test execution.
 
 Load the project into Eclipse.
